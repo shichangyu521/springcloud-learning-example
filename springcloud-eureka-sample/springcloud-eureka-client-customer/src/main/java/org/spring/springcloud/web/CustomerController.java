@@ -22,7 +22,7 @@ public class CustomerController {
 
     @RequestMapping("/customer")
     public String customer() {
-        String providerMsg = restTemplate.getForEntity("http://PROVIDER-SERVICE/provider",
+        String providerMsg = restTemplate.getForEntity("http://provider-service/provider",
                 String.class).getBody();
 
         return "Hello,Customer! msg from provider : <br/><br/> " + providerMsg;
